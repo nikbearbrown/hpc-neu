@@ -1,0 +1,11 @@
+# This file is used internally by FFMPEG.
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/hpc/youtube/claude-liam-lecture-aicr-introduction/media/videos/scenes/2160p24/partial_movie_files/B11_GpuCount/1697911619_3881108708_1658402896.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/hpc/youtube/claude-liam-lecture-aicr-introduction/media/videos/scenes/2160p24/partial_movie_files/B11_GpuCount/1167814662_2307521131_1968548278.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/hpc/youtube/claude-liam-lecture-aicr-introduction/media/videos/scenes/2160p24/partial_movie_files/B11_GpuCount/1167814662_495454833_3362176740.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/hpc/youtube/claude-liam-lecture-aicr-introduction/media/videos/scenes/2160p24/partial_movie_files/B11_GpuCount/1167814662_3669688252_391595124.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/hpc/youtube/claude-liam-lecture-aicr-introduction/media/videos/scenes/2160p24/partial_movie_files/B11_GpuCount/1167814662_2564739164_2666733912.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/hpc/youtube/claude-liam-lecture-aicr-introduction/media/videos/scenes/2160p24/partial_movie_files/B11_GpuCount/1167814662_3303615285_3155848192.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/hpc/youtube/claude-liam-lecture-aicr-introduction/media/videos/scenes/2160p24/partial_movie_files/B11_GpuCount/1167814662_4034264865_1409761685.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/hpc/youtube/claude-liam-lecture-aicr-introduction/media/videos/scenes/2160p24/partial_movie_files/B11_GpuCount/1167814662_1258161576_884544058.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/hpc/youtube/claude-liam-lecture-aicr-introduction/media/videos/scenes/2160p24/partial_movie_files/B11_GpuCount/1167814662_2094047865_2645487810.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/hpc/youtube/claude-liam-lecture-aicr-introduction/media/videos/scenes/2160p24/partial_movie_files/B11_GpuCount/1167814662_13874175_2371064523.mp4'

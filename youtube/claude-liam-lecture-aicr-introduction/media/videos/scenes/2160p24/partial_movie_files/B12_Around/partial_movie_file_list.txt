@@ -1,0 +1,12 @@
+# This file is used internally by FFMPEG.
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/hpc/youtube/claude-liam-lecture-aicr-introduction/media/videos/scenes/2160p24/partial_movie_files/B12_Around/1697911619_3857332104_1721619154.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/hpc/youtube/claude-liam-lecture-aicr-introduction/media/videos/scenes/2160p24/partial_movie_files/B12_Around/1167814662_113965729_3713982941.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/hpc/youtube/claude-liam-lecture-aicr-introduction/media/videos/scenes/2160p24/partial_movie_files/B12_Around/1167814662_2804588447_3626243089.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/hpc/youtube/claude-liam-lecture-aicr-introduction/media/videos/scenes/2160p24/partial_movie_files/B12_Around/1167814662_3799564092_1659735150.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/hpc/youtube/claude-liam-lecture-aicr-introduction/media/videos/scenes/2160p24/partial_movie_files/B12_Around/1167814662_1841915136_2231478743.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/hpc/youtube/claude-liam-lecture-aicr-introduction/media/videos/scenes/2160p24/partial_movie_files/B12_Around/1167814662_132800429_2304140321.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/hpc/youtube/claude-liam-lecture-aicr-introduction/media/videos/scenes/2160p24/partial_movie_files/B12_Around/1167814662_2033919515_3131828247.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/hpc/youtube/claude-liam-lecture-aicr-introduction/media/videos/scenes/2160p24/partial_movie_files/B12_Around/1167814662_3488437575_1861491109.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/hpc/youtube/claude-liam-lecture-aicr-introduction/media/videos/scenes/2160p24/partial_movie_files/B12_Around/1167814662_2019141606_109809051.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/hpc/youtube/claude-liam-lecture-aicr-introduction/media/videos/scenes/2160p24/partial_movie_files/B12_Around/1167814662_1917022541_2266979471.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/hpc/youtube/claude-liam-lecture-aicr-introduction/media/videos/scenes/2160p24/partial_movie_files/B12_Around/1167814662_3868865536_3958977968.mp4'

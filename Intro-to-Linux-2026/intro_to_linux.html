@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Research Computing Training</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <img src="file:////home/gpaik/backup/northeastern/workshop/2026SP/Intro-to-Linux-2026/images/Provost_Research_Computing.png" alt="drawing" width="900"/>
+<h1 id="research-computing-training">Research Computing Training</h1>
+<h2 id="presenter">Presenter</h2>
+<p>Ghanghoon &quot;Will&quot; Paik</p>
+<p>HPC Performance Engineer</p>
+<p><a href="https://rc.northeastern.edu/research-computing-team/">Research Computing</a></p>
+<h2 id="introduction-to-linux">Introduction to Linux</h2>
+<p>Welcome to another session in the <a href="https://rc.northeastern.edu/research-computing-spring-training/">Research Computing Spring 2026 Training Series</a>!<br>
+We'll learn about basics of Linux terminal.</p>
+<p>Today, this presentation will cover:</p>
+<p><a href="#1-what-is-linux">1. What is Linux</a><br>
+<a href="#2-navigating-file-system">2. Navigating File System</a><br>
+<a href="#3-file-management">3. File Management</a><br>
+<a href="#4-file-check-and-edit">4. File Check and Edit</a><br>
+<a href="#5-permissions-and-ownership">5. Permissions &amp; Ownership</a><br>
+<a href="#6-text-editors">6. Text Editors (Nano/Vim)</a><br>
+<a href="#7-additional-tips">7. Additional Tips</a></p>
+<h2 id="1-what-is-linux">1. What is Linux</h2>
+<img src="file:////home/gpaik/backup/northeastern/workshop/2026SP/Intro-to-Linux-2026/images/linux-tux.png"/>
+<p>Linux is a family of <strong>Operating Systems (OS)</strong> using the Linux Kernel which was originally created by Linus Torvalds in 1991 based on Unix. And, Unix is a much older OS which influenced a lot of other OS created in the future including Linux and macOS.</p>
+<p>Linux is widely used in various forms in our life from Android cell phones to personal computers to HPC clusters.</p>
+<h3 id="11-why-linux">1.1 Why Linux?</h3>
+<p>Linux is based on Free and Open Source community so anyone can contribute to the development. In Linux community, a lot of tools and software are provided for &quot;free&quot; which becomes a huge advantage.</p>
+<p>Linux systems are usually considered highly secure and robust. So, they are widely adapted to servers and clusters.</p>
+<h3 id="12-linux-ui">1.2 Linux UI</h3>
+<p>While Linux often provides Graphical User Interface (GUI), it is based on Command Line Interface (CLI). CLI can be accessed by &quot;Terminal&quot;.</p>
+<p>In terminal, keyboard becomes the main input device.</p>
+<img src="file:////home/gpaik/backup/northeastern/workshop/2026SP/Intro-to-Linux-2026/images/linux-gui.png" width="100%" />
+<img src="file:////home/gpaik/backup/northeastern/workshop/2026SP/Intro-to-Linux-2026/images/linux-tui.png" width="100%" />
+<p>Once opened, terminal shows user name, host name, current location, and  shell type:</p>
+<pre><code>[user@host myDir]$
+[root@host myDir]#
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Presented</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>user / root</td>
+<td>User name</td>
+</tr>
+<tr>
+<td>host</td>
+<td>Host name</td>
+</tr>
+<tr>
+<td>myDir</td>
+<td>Current location</td>
+</tr>
+<tr>
+<td>$ / #</td>
+<td>$: Normal user<br>#: Root user</td>
+</tr>
+</tbody>
+</table>
+<p>In Linux, based on user type (normal vs. root), command execution can be limited. For example, normal user cannot install packages on system.</p>
+<pre><code class="language-bash"><span class="hljs-comment"># Installing a package without sudo permission</span>
+[user@host ~]$ sudo dnf install python
+user is not <span class="hljs-keyword">in</span> the sudoers file. This incident will be reported.
+</code></pre>
+<h2 id="2-navigating-file-system">2. Navigating File System</h2>
+<p>Linux file system is similar to Windows or Mac. Two big items, Files and Directories (folders).</p>
+<img src="file:////home/gpaik/backup/northeastern/workshop/2026SP/Intro-to-Linux-2026/images/linux-file-color.png" width="100%" />
+<p>Different highlighting are used in terminal to visually distinguish them. Usually follow the color code below.</p>
+<table>
+<thead>
+<tr>
+<th>Color</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Blue</td>
+<td>Directory</td>
+</tr>
+<tr>
+<td>Green</td>
+<td>Executable</td>
+</tr>
+<tr>
+<td>Red</td>
+<td>Compressed</td>
+</tr>
+<tr>
+<td>Black / White</td>
+<td>File</td>
+</tr>
+<tr>
+<td><em>Other colors exist for different file types</em></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="21-path">2.1 Path</h3>
+<p>Two types to represent the path: Absolute and Relative.</p>
+<pre><code class="language-bash"><span class="hljs-comment"># Absolute path</span>
+/home/user/dir
+
+<span class="hljs-comment"># Relative path</span>
+../dir
+</code></pre>
+<ul>
+<li><code>&quot;.&quot;</code> (one dot): current location</li>
+<li><code>&quot;..&quot;</code> (two dots): parent location (or one level up)</li>
+</ul>
+<h3 id="22-move-around">2.2 Move Around</h3>
+<p>Current location: <code>$ pwd</code> (print working directory)</p>
+<pre><code class="language-bash">[user@host ~]$ <span class="hljs-built_in">pwd</span>
+/home/user
+</code></pre>
+<p><em>&quot;<code>~</code>&quot; (tilde) represent &quot;Home&quot; directory</em></p>
+<p>Check files and directories: <code>$ ls</code> (list)</p>
+<pre><code class="language-bash">[user@host ~]$ <span class="hljs-built_in">ls</span>
+dir1 dir2 dir3 file1 file2 file3
+</code></pre>
+<ul>
+<li>
+<p>You can use &quot;flags&quot; (or options) like <code>-l</code> and <code>-a</code>. Or, they can be combined <code>-la</code></p>
+<pre><code class="language-bash">[user@host ~]$ <span class="hljs-built_in">ls</span> -l
+total 12
+drwxr-xr-x. 1 user group 90 Jan  8 13:47 dir1
+drwxr-xr-x. 1 user group 82 Jan  9 02:07 dir2
+drwxr-xr-x. 1 user group 94 Jan  8 13:46 dir3
+-rw-r--r--. 1 user group 10 Jan  8 13:44 file1
+-rw-r--r--. 1 user group  3 Jan  8 13:44 file2
+-rw-r--r--. 1 user group  6 Jan  8 13:43 file3
+
+[user@host ~]$ <span class="hljs-built_in">ls</span> -a
+. .. dir1 dir2 dir3 file1 file2 file3 .hidden1 .hidden2 .hiddenDir
+</code></pre>
+<p><em>Hidden files have &quot;.&quot; in front of name (i.e. .hidden1).</em></p>
+</li>
+</ul>
+<p>Change location: <code>$ cd</code> (change directory)</p>
+<pre><code class="language-bash">[user@host ~]$ <span class="hljs-built_in">cd</span> dir1
+[user@host dir1]$ <span class="hljs-built_in">pwd</span>
+/home/user/dir1
+
+<span class="hljs-comment"># Go one level up</span>
+[user@host dir1]$ <span class="hljs-built_in">cd</span> ..
+[user@host ~]$ <span class="hljs-built_in">pwd</span>
+/home/user
+
+<span class="hljs-comment"># Go to home</span>
+[user@host someDir]$ <span class="hljs-built_in">cd</span>
+[user@host someDir]$ <span class="hljs-built_in">cd</span> ~
+[user@host ~]$ <span class="hljs-built_in">pwd</span>
+/home/user
+</code></pre>
+<h3 id="3-file-management">3. File Management</h3>
+<p>Just like GUI environment, files and directories can be managed within terminal.</p>
+<h3 id="31-filedirectory-creation">3.1 File/Directory Creation</h3>
+<p>Create an empty file: <code>$ touch</code></p>
+<pre><code class="language-bash">[user@host emptyDir]$ <span class="hljs-built_in">touch</span> new_file
+[user@host emptyDir]$ <span class="hljs-built_in">ls</span>
+new_file
+</code></pre>
+<p>Create a file with content: <strong>Redirection</strong> (&gt; vs &gt;&gt;)</p>
+<ul>
+<li><code>&gt;</code>: <strong>Overwrites</strong> the file (Clean slate).</li>
+<li><code>&gt;&gt;</code>: <strong>Appends</strong> to the end of the file (Add more).</li>
+</ul>
+<pre><code class="language-bash"><span class="hljs-comment"># Create (Overwrite)</span>
+[user@host emptyDir]$ <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Hello&quot;</span> &gt; new_file
+[user@host emptyDir]$ <span class="hljs-built_in">cat</span> new_file
+Hello
+
+<span class="hljs-comment"># Append</span>
+[user@host emptyDir]$ <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;World&quot;</span> &gt;&gt; new_file
+[user@host emptyDir]$ <span class="hljs-built_in">cat</span> new_file
+Hello
+World
+</code></pre>
+<p>Create a new directory: <code>$ mkdir</code></p>
+<pre><code class="language-bash">[user@host emptyDir]$ <span class="hljs-built_in">mkdir</span> new_dir
+[user@host emptyDir]$ <span class="hljs-built_in">ls</span>
+new_dir new_file
+</code></pre>
+<h3 id="32-move-filedirectory">3.2 Move File/Directory</h3>
+<p>Make a copy of a file or a directory: <code>$ cp</code> or <code>$ cp -R</code>
+(<code>-R</code> or recursive is required for directory)</p>
+<pre><code class="language-bash"><span class="hljs-comment"># Copy a file</span>
+[user@host emptyDir]$ <span class="hljs-built_in">cp</span> new_file new_file_copy
+[user@host emptyDir]$ <span class="hljs-built_in">ls</span>
+new_dir new_file new_file_copy
+
+<span class="hljs-comment"># Copy a directory</span>
+[user@host emptyDir]$ <span class="hljs-built_in">cp</span> -R new_dir new_dir_copy
+[user@host emptyDir]$ <span class="hljs-built_in">ls</span>
+new_dir new_dir_copy new_file new_file_copy
+</code></pre>
+<p><code>cp</code> keeps the original and creates a clone</p>
+<p>Move a file or a directory: <code>$ mv</code></p>
+<pre><code class="language-bash">[user@host emptyDir]$ <span class="hljs-built_in">mv</span> new_file_copy ./new_dir_copy
+[user@host emptyDir]$ <span class="hljs-built_in">cd</span> new_dir_copy
+[user@host new_dir_copy]$ <span class="hljs-built_in">ls</span>
+new_file_copy
+</code></pre>
+<p><code>mv</code> can be used to rename a file or directory</p>
+<pre><code class="language-bash">[user@host emptyDir]$ <span class="hljs-built_in">mv</span> new_file new_name
+[user@host emptyDir]$ <span class="hljs-built_in">ls</span>
+new_dir new_dir_copy new_name
+</code></pre>
+<h3 id="33-remove-filedirectory">3.3 Remove File/Directory</h3>
+<p>Remove a file or directory: <code>$ rm</code> or <code>$ rm -r</code>
+(<code>-r</code> or recursive is required for directory)</p>
+<pre><code class="language-bash"><span class="hljs-comment"># Remove a file</span>
+[user@host emptyDir]$ <span class="hljs-built_in">rm</span> new_name
+[user@host emptyDir]$ <span class="hljs-built_in">ls</span>
+new_dir new_dir_copy
+
+<span class="hljs-comment"># Remove a directory</span>
+[user@host emptyDir]$ <span class="hljs-built_in">rm</span> -r new_dir_copy
+[user@host emptyDir]$ <span class="hljs-built_in">ls</span>
+new_dir
+</code></pre>
+<p><strong>Removing should be done carefully since it cannot be undone.</strong></p>
+<h3 id="34-creating-symlinks-shortcuts">3.4 Creating Symlinks (Shortcuts)</h3>
+<p>In Linux, a <strong>Symbolic Link</strong> (or symlink) serves a similar purpose to a <strong>shortcut</strong> in Windows or an <strong>alias</strong> in macOS. It points to another file or directory without taking up extra space.</p>
+<p>Create a symlink: <code>$ ln -s &lt;TARGET&gt; &lt;LINK_NAME&gt;</code> (Tip: Think of it as &quot;Point to Target, call it Link Name&quot;)</p>
+<pre><code class="language-Bash"><span class="hljs-comment"># Example: Creating a shortcut to a deep directory</span>
+[user@host ~]$ <span class="hljs-built_in">ln</span> -s /projects/data/intro_to_linux ./my_data
+
+[user@host ~]$ <span class="hljs-built_in">ls</span> -l
+total 0
+lrwxrwxrwx 1 user group 18 Feb 12 15:21 my_data -&gt; /projects/data/intro_to_linux
+</code></pre>
+<ul>
+<li><code>l</code>: The line starts with <code>l</code>, indicating it is a link.</li>
+<li><code>-&gt;</code>: Shows where the link is pointing.</li>
+<li><strong>Usage</strong>: You can now <code>$ cd my_data</code> to access the files in the deep directory immediately.</li>
+</ul>
+<blockquote>
+<p>Warning: If you move or delete the <strong>original</strong> file, the link will be &quot;broken&quot; (it will point to nowhere).</p>
+</blockquote>
+<h2 id="4-file-check-and-edit">4. File Check and Edit</h2>
+<p>In terminal, text viewer and editor are often included.</p>
+<h3 id="short-document--cat">Short document: <code>$ cat</code></h3>
+<pre><code class="language-bash">[user@host ~]$ <span class="hljs-built_in">cat</span> short_doc.txt
+hello world!
+</code></pre>
+<p><code>cat</code> dumps all the content in terminal. This is not recommended for a long document.</p>
+<h3 id="long-document--less">Long document: <code>$ less</code></h3>
+<pre><code class="language-bash">[user@host ~]$ less long_doc.txt
+</code></pre>
+<p><code>less</code> is a scrollable text viewer. Use keys (or sometimes mouse wheel) to control the view.</p>
+<img src="file:////home/gpaik/backup/northeastern/workshop/2026SP/Intro-to-Linux-2026/images/linux-less.gif" width="100%"/>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>↑ / ↓ (Arrow key)</td>
+<td>Scroll one line up / down</td>
+</tr>
+<tr>
+<td>Home</td>
+<td>Go to top</td>
+</tr>
+<tr>
+<td>End</td>
+<td>Go to bottom</td>
+</tr>
+<tr>
+<td>Page Up / Down</td>
+<td>Scroll a page up / down</td>
+</tr>
+<tr>
+<td>q</td>
+<td>Quit</td>
+</tr>
+<tr>
+<td><em>Warning: ESC (escape) will not close the viewer.</em></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-ownership-and-file-permission">5. Ownership and File permission</h2>
+<h3 id="51-linux-ownership-types">5.1 Linux Ownership Types:</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Type</th>
+<th style="text-align:center">Symbol</th>
+<th style="text-align:center">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">User</td>
+<td style="text-align:center">u</td>
+<td style="text-align:center">User who owns the file / directory</td>
+</tr>
+<tr>
+<td style="text-align:center">Group</td>
+<td style="text-align:center">g</td>
+<td style="text-align:center">Group which owns the file / directory</td>
+</tr>
+<tr>
+<td style="text-align:center">Others</td>
+<td style="text-align:center">o</td>
+<td style="text-align:center">Everyone on the system</td>
+</tr>
+<tr>
+<td style="text-align:center">All</td>
+<td style="text-align:center">a</td>
+<td style="text-align:center">All three (owner, group, and others)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-linux-permission-types">5.2 Linux Permission Types:</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Type</th>
+<th style="text-align:center">Symbol</th>
+<th style="text-align:center">Octal Value</th>
+<th style="text-align:center">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Read</td>
+<td style="text-align:center">r</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">View file contents or list of files in a directory</td>
+</tr>
+<tr>
+<td style="text-align:center">Write</td>
+<td style="text-align:center">w</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">Modify a file or add / delete files in a directory</td>
+</tr>
+<tr>
+<td style="text-align:center">Execute</td>
+<td style="text-align:center">x</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">Run a file as a program or navigate into a directory</td>
+</tr>
+<tr>
+<td style="text-align:center">No permission</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">No permission</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<pre><code># Example Output
+-rwxrw-r-- 1 user group 46 Feb 14 16:37 File.txt
+^ ^        ^ ^    ^     ^  ^            ^
+| |        | |    |     |  |            |
+1 2        3 4    5     6  7            8
+</code></pre>
+<p><strong>Breakdown:</strong></p>
+<ol>
+<li><strong>File Type</strong>: <code>-</code> (File), <code>d</code> (Directory), <code>l</code> (Link)</li>
+<li><strong>Permissions</strong>: <code>rwxrw-r--</code></li>
+<li><strong>Hard Links</strong>: Number of links to this file</li>
+<li><strong>Owner</strong>: The user who owns the file (<code>user</code>)</li>
+<li><strong>Group</strong>: The group who owns the file (<code>group</code>)</li>
+<li><strong>Size</strong>: File size in bytes (<code>46</code>)</li>
+<li><strong>Modification Time</strong>: Last edited time</li>
+<li><strong>File Name</strong>: Name of the file/directory</li>
+</ol>
+<h4 id="decoding-permissions">Decoding Permissions</h4>
+<p>The first column <code>-rwxrw-r--</code> can be confusing. Let's break it down into 4 parts:</p>
+<pre><code>Type   Owner   Group   Others
+[-]    [rwx]   [rw-]   [r--]
+ |       |       |       |
+File   Read    Read    Read
+       Write   Write
+       Exec
+</code></pre>
+<ul>
+<li><strong>Type</strong>: <code>d</code> = Directory, <code>l</code> = Link, <code>-</code> = File</li>
+<li><strong>Owner (rwx)</strong>: Can Read, Write, and Execute</li>
+<li><strong>Group (rw-)</strong>: Can Read and Write, but NOT Execute</li>
+<li><strong>Others (r--)</strong>: Can only Read</li>
+</ul>
+<h3 id="53-permission-operators">5.3 Permission Operators</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Operator</th>
+<th style="text-align:center">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">+</td>
+<td style="text-align:center">Add permission</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:center">Remove permission</td>
+</tr>
+</tbody>
+</table>
+<h3 id="54-modify-permission">5.4 Modify Permission</h3>
+<ul>
+<li>
+<p>Modify permission with &quot;Symbol&quot;:</p>
+<pre><code class="language-bash"><span class="hljs-comment"># Add permission</span>
+$ <span class="hljs-built_in">chmod</span> &lt;OWNERSHIP&gt;+&lt;TYPE&gt; &lt;FILE_NAME&gt;
+<span class="hljs-comment"># Example:</span>
+$ <span class="hljs-built_in">chmod</span> g+x File.txt
+
+<span class="hljs-comment"># Remove permission</span>
+$ <span class="hljs-built_in">chmod</span> &lt;OWNERSHIP&gt;-&lt;TYPE&gt; &lt;FILE_NAME&gt;
+<span class="hljs-comment"># Example:</span>
+$ <span class="hljs-built_in">chmod</span> u-x File.txt
+
+<span class="hljs-comment"># Combination example:</span>
+$ <span class="hljs-built_in">chmod</span> ug+w,o-r File.txt
+</code></pre>
+</li>
+<li>
+<p>Modify permission with &quot;Octal Value&quot;:</p>
+<pre><code class="language-bash">$ <span class="hljs-built_in">chmod</span> &lt;3 Values&gt; &lt;FILE_NAME&gt;
+<span class="hljs-comment"># Example:</span>
+$ <span class="hljs-built_in">chmod</span> 751 File.txt
+<span class="hljs-comment"># USER   = 7: r(4) + w(2) + x(1)</span>
+<span class="hljs-comment"># GROUP  = 5: r(4) + x(1)</span>
+<span class="hljs-comment"># OTHERS = 1: x(1)</span>
+</code></pre>
+</li>
+</ul>
+<h3 id="55-modify-ownership">5.5 Modify Ownership</h3>
+<pre><code class="language-bash"><span class="hljs-comment"># File ownership</span>
+$ <span class="hljs-built_in">chown</span> &lt;USER&gt;:&lt;GROUP&gt; FILE_NAME
+
+<span class="hljs-comment"># Directory ownership</span>
+$ <span class="hljs-built_in">chown</span> -R &lt;USER&gt;:&lt;GROUP&gt; DIRECTORY_NAME
+</code></pre>
+<h2 id="6-file-editor">6. File Editor</h2>
+<p>In Linux, a few different Terminal User Interface (TUI) editors are available.</p>
+<h3 id="61-nano">6.1 Nano</h3>
+<p>Most basic and easy to learn text editor.</p>
+<pre><code class="language-bash">$ nano &lt;FILE_NAME&gt;
+<span class="hljs-comment"># Example:</span>
+$ nano myFile.txt
+</code></pre>
+<img src="file:////home/gpaik/backup/northeastern/workshop/2026SP/Intro-to-Linux-2026/images/linux-nano.png" width="100%"/>
+<p>Shortcuts are listed in the bottom of the screen. Caret symbol (<code>^</code>) means <code>Ctrl</code> key.</p>
+<h3 id="62-vi-or-vim">6.2 Vi (or ViM)</h3>
+<p>A bit more advanced text editor.</p>
+<pre><code class="language-bash">$ vim &lt;FILE_NAME&gt;
+<span class="hljs-comment"># Example:</span>
+$ vim myFile.txt
+</code></pre>
+<img src="file:////home/gpaik/backup/northeastern/workshop/2026SP/Intro-to-Linux-2026/images/linux-vi.png" width="100%"/>
+<ul>
+<li>Normal mode: Cannot edit a file</li>
+<li>Insert mode: Can edit a file</li>
+</ul>
+<p>Switch between normal and insert mode:</p>
+<ol>
+<li>Press <code>i</code> to enter <strong>Insert Mode</strong></li>
+<li>Press <code>ESC</code> to exit <strong>Insert Mode</strong> (back to <strong>Normal Mode</strong>)</li>
+<li>Type <code>:wq</code> to save and exit in <strong>Normal Mode</strong></li>
+</ol>
+<blockquote>
+<p>In case you are stuck, press <code>ESC</code> and type <code>:q!</code> to force quit without saving.</p>
+</blockquote>
+<h2 id="7-quick-tips">7. Quick Tips</h2>
+<h3 id="71-auto-complete">7.1 Auto Complete</h3>
+<p>Use <code>TAB</code> key to autocomplete a long file name or command.</p>
+<pre><code class="language-bash"><span class="hljs-comment"># Without autocomplete</span>
+$ <span class="hljs-built_in">cd</span> ~/myResearchProject
+
+<span class="hljs-comment"># With autocomplete</span>
+$ <span class="hljs-built_in">cd</span> ~/myRe&lt;TAB&gt;
+$ <span class="hljs-built_in">cd</span> ~/myResearchProject
+</code></pre>
+<img src="file:////home/gpaik/backup/northeastern/workshop/2026SP/Intro-to-Linux-2026/images/linux-tab.gif" width="100%"/>
+<h3 id="72-abort">7.2 Abort</h3>
+<p>Use <code>Ctrl + C</code> to stop running process or cancel typing.</p>
+<pre><code class="language-bash"><span class="hljs-comment"># Stop process</span>
+$ python longProgram.py
+(... no progress <span class="hljs-keyword">for</span> 30 min ...)
+&lt;Ctrl + C&gt;
+
+<span class="hljs-comment"># Cancel a mistyped command</span>
+$ <span class="hljs-built_in">cd</span> ~/myRESearchProij
+&lt;Ctrl + C&gt;
+</code></pre>
+<img src="file:////home/gpaik/backup/northeastern/workshop/2026SP/Intro-to-Linux-2026/images/linux-ctrl-c.gif" width="100%"/>
+<h3 id="73-clear-terminal-screen">7.3 Clear Terminal Screen</h3>
+<p>Use <code>clear</code> command. This command will clean up the terminal screen.</p>
+<img src="file:////home/gpaik/backup/northeastern/workshop/2026SP/Intro-to-Linux-2026/images/linux-clear.gif" width="100%"/>
+<h2 id="happy-computing"><em>Happy Computing!</em></h2>
+<h2 id="how-to-get-help">How to get help</h2>
+<p>Email the Research Computing team at <a href="mailto:rchelp@northeastern.edu">rchelp@northeastern.edu</a>.</p>
+<p>Come to <a href="https://rc.northeastern.edu/getting-help/">office hours</a> hosted on Zoom.</p>
+<p>Or <a href="https://rc.northeastern.edu/getting-help/">book a consultation</a> with an RC team member.</p>
+<p>Review our <a href="https://rc-docs.northeastern.edu/en/latest/index.html">Documentation</a>.</p>
+<p>Thank you!</p>
+<hr>
+<p><em>For questions or support, contact the Research Computing team at <a href="mailto:rchelp@northeastern.edu">rchelp@northeastern.edu</a></em></p>
+
+            <script async src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
+            
+        </body>
+        </html>

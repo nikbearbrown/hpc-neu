@@ -1,0 +1,1532 @@
+{
+  "metadata": {
+    "slug": "claude-liam-lecture-aicr-introduction",
+    "title": "AICR Introduction",
+    "topic": "RESEARCH COMPUTING · AICR",
+    "skill": "lecture",
+    "style_preset": "lecture",
+    "channel": "claude-liam",
+    "persona": "Liam (in for Bear)",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "engine": "kokoro",
+    "clock": "narration",
+    "palette": "claude",
+    "register": "Teardown",
+    "fps": 24,
+    "aspect_ratio": "16:9",
+    "width": 3840,
+    "height": 2160,
+    "caption_policy": "none",
+    "greeting_language": "German (Hallo)",
+    "audience": "Northeastern researchers and students about to use the AICR GPU cluster for the first time; assumes no other film or book",
+    "source_doc": "hpc/AICR-Introduction-2026/aicr-introduction.md (Northeastern Research Computing training, github.com/northeastern-rc-training/AICR-Introduction-2026), read 2026-10-02",
+    "playlist": "AICR",
+    "chapter_number": 0,
+    "tags": [
+      "AICR",
+      "AI Compute Resource",
+      "MGHPCC",
+      "Massachusetts AI Hub",
+      "Northeastern University",
+      "Research Computing",
+      "HPC",
+      "GPU cluster",
+      "Slurm",
+      "sbatch",
+      "srun",
+      "Open OnDemand",
+      "Globus",
+      "Explorer cluster",
+      "Nik Bear Brown"
+    ],
+    "build": {
+      "at": "2026-10-02T13:52:11",
+      "cut": "review",
+      "filled": 29,
+      "of": 29,
+      "slates": [],
+      "skin_warnings": [
+        "BIDEA: palette=claude but the cold open is 'BrutalistHesitantWriter' — COLD OPEN LAW wants ClaudeComposerAsk"
+      ]
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "BIDEA",
+      "act": "the idea",
+      "lane": "bookend",
+      "proof_gate": "SHOW",
+      "narration_text": "Hallo. This is Liam, in for Bear. First, a correction. AICR is not the cluster where you build and test your AI work. It's the cluster where you run the big jobs. It's a shared GPU cluster for AI research in Massachusetts, and this lecture covers what it is, how you get on, where your files live, and how you run a job.",
+      "estimated_duration_s": 25.2,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "types 'AICR is the cluster where I build and test my AI work'"
+          },
+          {
+            "at": 0.35,
+            "event": "backspaces 'build and test' -> 'run the big jobs for'"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "AICR is the cluster where I\nbuild and test my AI work",
+            "triggerWords": "build and test",
+            "replacementWords": "run the big jobs for",
+            "fontSize": 70,
+            "charMs": 62,
+            "hesitateBetween": 6,
+            "hesitateWithin": 1,
+            "mistakeRate": 2,
+            "jitter": 20,
+            "seed": "claude-liam-lecture-aicr-introduction",
+            "banner": ""
+          },
+          "rendered": {
+            "out": "media/BIDEA.mp4",
+            "at": "2026-10-02T17:17:31.280842+00:00"
+          }
+        }
+      },
+      "lead_silence_s": 0.8,
+      "motion_claim": "The writer types the newcomer's framing (build and test) and corrects it to the real one (run the big jobs).",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Hesitant-writer bookend: the correction is the motion."
+      },
+      "actual_duration_s": 16.64,
+      "audio_file": "mp3/beat-BIDEA.mp3",
+      "render_duration_s": 16.666666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BIDEA.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter",
+        "at": "2026-10-02T13:52:11"
+      }
+    },
+    {
+      "beat_id": "BDEFS",
+      "act": "terms",
+      "lane": "bookend",
+      "proof_gate": "CARD",
+      "narration_text": "Six terms. An HPC cluster: many computers wired together and shared by many people. A GPU: a chip that does AI math far faster than a normal processor. Slurm: the scheduler. You ask for resources, and it decides when you run. A partition: a named group of machines with its own rules. A PI: the principal investigator, the faculty member who leads a project. And Open OnDemand: a website that gives you the cluster in a browser.",
+      "estimated_duration_s": 30.8,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.08,
+            "event": "'HPC cluster' lands"
+          },
+          {
+            "at": 0.25,
+            "event": "'GPU'"
+          },
+          {
+            "at": 0.4,
+            "event": "'Slurm'"
+          },
+          {
+            "at": 0.58,
+            "event": "'partition'"
+          },
+          {
+            "at": 0.72,
+            "event": "'PI'"
+          },
+          {
+            "at": 0.87,
+            "event": "'Open OnDemand'"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeDefinitions",
+          "props": {
+            "title": "Terms In This Lecture",
+            "terms": [
+              {
+                "term": "HPC cluster",
+                "meaning": "many computers wired together and shared by many people"
+              },
+              {
+                "term": "GPU",
+                "meaning": "a chip that does AI math far faster than a normal processor"
+              },
+              {
+                "term": "Slurm",
+                "meaning": "the scheduler: you ask for resources, it decides when you run"
+              },
+              {
+                "term": "partition",
+                "meaning": "a named group of machines with its own rules"
+              },
+              {
+                "term": "PI",
+                "meaning": "principal investigator: the faculty member who leads a project"
+              },
+              {
+                "term": "Open OnDemand",
+                "meaning": "a website that gives you the cluster in a browser"
+              }
+            ],
+            "folderLabel": "@NikBearBrown",
+            "durationSeconds": 22.95
+          }
+        }
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "TERMS card: six prerequisites, one line each."
+      },
+      "actual_duration_s": 22.95,
+      "audio_file": "mp3/beat-BDEFS.mp3",
+      "render_duration_s": 22.958333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BDEFS.mp4",
+        "filled_by": "media",
+        "at": "2026-10-02T13:52:11"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "I · What AICR Is",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Start with what it is. AICR stands for AI Compute Resource. Six universities at the Massachusetts Green High Performance Computing Center, together with the Massachusetts AI Hub, built one cluster, and they share it.",
+      "estimated_duration_s": 13.6,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Six small campus blocks stand around the stage; a line draws from each to the centre, where one large data-centre block rises; label 'AICR'.",
+        "show": [
+          {
+            "at": 0.2,
+            "event": "six campus blocks"
+          },
+          {
+            "at": 0.6,
+            "event": "lines draw to the centre"
+          },
+          {
+            "at": 0.8,
+            "event": "the shared cluster rises"
+          }
+        ],
+        "manim": {
+          "class": "B10_SixIntoOne"
+        },
+        "motion_claim": "Six small campus blocks stand around the stage; a line draws from each to the centre, where one large data-centre block rises; label 'AICR'."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "lecture, isometric lane (show-tell drawing laws): one drawn scene on a cream stage with a few labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 12.67,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 12.708333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B10.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-02T13:52:11"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "I · What AICR Is",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Inside are two kinds of GPU. Two hundred forty-eight NVIDIA B200s, and one hundred fifty-two RTX PRO 6000s. That's four hundred GPUs in all.",
+      "estimated_duration_s": 9.6,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Two grids of small squares fill in, counting up: 248 on the left (B200), 152 on the right (RTX PRO 6000); the two counters merge into a hero '400'.",
+        "show": [
+          {
+            "at": 0.25,
+            "event": "248 B200 squares fill"
+          },
+          {
+            "at": 0.6,
+            "event": "152 RTX squares fill"
+          },
+          {
+            "at": 0.88,
+            "event": "400"
+          }
+        ],
+        "manim": {
+          "class": "B11_GpuCount"
+        },
+        "motion_claim": "Two grids of small squares fill in, counting up: 248 on the left (B200), 152 on the right (RTX PRO 6000); the two counters merge into a hero '400'."
+      },
+      "actual_duration_s": 10.41,
+      "audio_file": "mp3/beat-B11.mp3",
+      "render_duration_s": 10.416666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B11.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-02T13:52:11"
+      }
+    },
+    {
+      "beat_id": "B12",
+      "act": "I · What AICR Is",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Around the GPUs: fast storage, a modern software stack for machine learning, and a CPU-only section for the work that needs no GPU, like cleaning and analysing data.",
+      "estimated_duration_s": 11.2,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "The GPU rack from B10 sits centre; a storage block slides in beside it, a stack of software pages lands on top, and a lighter CPU block arrives on the other side.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "storage"
+          },
+          {
+            "at": 0.4,
+            "event": "software stack"
+          },
+          {
+            "at": 0.65,
+            "event": "CPU-only block"
+          }
+        ],
+        "manim": {
+          "class": "B12_Around"
+        },
+        "motion_claim": "The GPU rack from B10 sits centre; a storage block slides in beside it, a stack of software pages lands on top, and a lighter CPU block arrives on the other side."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "lecture, isometric lane (show-tell drawing laws): one drawn scene on a cream stage with a few labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 10.58,
+      "audio_file": "mp3/beat-B12.mp3",
+      "render_duration_s": 10.583333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B12.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-02T13:52:11"
+      }
+    },
+    {
+      "beat_id": "B13",
+      "act": "I · What AICR Is",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Northeastern already has its own cluster, called Explorer. Treat AICR as an extension of it. You develop and test on Explorer. When the code works, you bring it to AICR for the production run. AICR is shared by every partner university, so it isn't the place to debug.",
+      "estimated_duration_s": 19.2,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A small rack labelled 'Explorer' on the left with a job box beside it; the box is worked on (a check lands); it then rides a belt to the large 'AICR' rack on the right, whose lights come on.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "Explorer rack"
+          },
+          {
+            "at": 0.4,
+            "event": "develop and test: check"
+          },
+          {
+            "at": 0.6,
+            "event": "box rides to AICR"
+          },
+          {
+            "at": 0.75,
+            "event": "production run: lights"
+          }
+        ],
+        "manim": {
+          "class": "B13_ExplorerToAicr"
+        },
+        "motion_claim": "A small rack labelled 'Explorer' on the left with a job box beside it; the box is worked on (a check lands); it then rides a belt to the large 'AICR' rack on the right, whose lights come on."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "lecture, isometric lane (show-tell drawing laws): one drawn scene on a cream stage with a few labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 14.49,
+      "audio_file": "mp3/beat-B13.mp3",
+      "render_duration_s": 14.5,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B13.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-02T13:52:11"
+      }
+    },
+    {
+      "beat_id": "B20",
+      "act": "II · Getting On",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Getting on starts with a faculty member. The principal investigator submits a brief proposal through a request form. Access comes through that project.",
+      "estimated_duration_s": 9.2,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A proposal page slides toward a closed gate; the gate opens; a project folder appears behind it and two small user tokens step through.",
+        "show": [
+          {
+            "at": 0.3,
+            "event": "proposal page"
+          },
+          {
+            "at": 0.6,
+            "event": "gate opens"
+          },
+          {
+            "at": 0.85,
+            "event": "project and its users"
+          }
+        ],
+        "manim": {
+          "class": "B20_Proposal"
+        },
+        "motion_claim": "A proposal page slides toward a closed gate; the gate opens; a project folder appears behind it and two small user tokens step through."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "lecture, isometric lane (show-tell drawing laws): one drawn scene on a cream stage with a few labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 8.66,
+      "audio_file": "mp3/beat-B20.mp3",
+      "render_duration_s": 8.666666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B20.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-02T13:52:11"
+      }
+    },
+    {
+      "beat_id": "B21",
+      "act": "II · Getting On",
+      "lane": "remotion",
+      "proof_gate": "SHOW",
+      "narration_text": "Once you're on a project, the easiest door is Open OnDemand, at o o d dot A I C R dot A I. It sends you to a sign-in page. You choose your identity provider, then sign in with your Northeastern username and password.",
+      "estimated_duration_s": 17.6,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "browser window opens on ood.aicr.ai"
+          },
+          {
+            "at": 0.57,
+            "event": "zoom to 'Select an Identity Provider'; terracotta ring"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrowserCapture",
+          "props": {
+            "url": "ood.aicr.ai",
+            "image": "lecture-aicr-introduction/ood.png",
+            "caption": "The real sign-in page, captured 2 October 2026",
+            "moves": [
+              {
+                "at": 0.0,
+                "x": 0.5,
+                "y": 0.42,
+                "scale": 1.3
+              },
+              {
+                "at": 0.57,
+                "x": 0.5,
+                "y": 0.55,
+                "scale": 1.7,
+                "ring": [
+                  0.255,
+                  0.405,
+                  0.49,
+                  0.295
+                ]
+              }
+            ],
+            "durationSeconds": 12.78
+          },
+          "rendered": {
+            "out": "media/B21.mp4",
+            "at": "2026-10-02T17:18:08.227602+00:00"
+          }
+        }
+      },
+      "motion_claim": "The real sign-in page; the camera pushes in to the identity-provider choice as it is named.",
+      "actual_duration_s": 12.78,
+      "audio_file": "mp3/beat-B21.mp3",
+      "render_duration_s": 12.791666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B21.mp4",
+        "filled_by": "remotion:BrowserCapture",
+        "at": "2026-10-02T13:52:11"
+      }
+    },
+    {
+      "beat_id": "B22",
+      "act": "II · Getting On",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "One thing changes: your username. On the cluster it's slightly different, so accounts from the partner schools stay distinct. If you're j dot smith on Explorer, you're j underscore smith underscore n e u on AICR.",
+      "estimated_duration_s": 14.4,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "'j.smith' in mono under the label Explorer; a copy slides right under the label AICR, its dot turns into an underscore and '_neu' slides on.",
+        "show": [
+          {
+            "at": 0.55,
+            "event": "j.smith on Explorer"
+          },
+          {
+            "at": 0.75,
+            "event": "dot becomes underscore, _neu arrives"
+          }
+        ],
+        "manim": {
+          "class": "B22_Username"
+        },
+        "motion_claim": "'j.smith' in mono under the label Explorer; a copy slides right under the label AICR, its dot turns into an underscore and '_neu' slides on."
+      },
+      "actual_duration_s": 12.39,
+      "audio_file": "mp3/beat-B22.mp3",
+      "render_duration_s": 12.416666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B22.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-02T13:52:11"
+      }
+    },
+    {
+      "beat_id": "B30",
+      "act": "III · Where Files Live",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Your files live in three places, the same three as on Explorer. Home, for small scripts and your environment. Scratch, for temporary output from running jobs. And the project directory, for shared, longer-term work.",
+      "estimated_duration_s": 13.6,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Three containers land in a row: a small box (home), a wide open bin (scratch), a cabinet (project); each gets its real path as a label.",
+        "show": [
+          {
+            "at": 0.3,
+            "event": "home"
+          },
+          {
+            "at": 0.55,
+            "event": "scratch"
+          },
+          {
+            "at": 0.8,
+            "event": "project"
+          }
+        ],
+        "manim": {
+          "class": "B30_ThreePlaces"
+        },
+        "motion_claim": "Three containers land in a row: a small box (home), a wide open bin (scratch), a cabinet (project); each gets its real path as a label."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "lecture, isometric lane (show-tell drawing laws): one drawn scene on a cream stage with a few labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 12.12,
+      "audio_file": "mp3/beat-B30.mp3",
+      "render_duration_s": 12.125,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B30.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-02T13:52:11"
+      }
+    },
+    {
+      "beat_id": "B31",
+      "act": "III · Where Files Live",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Home holds a hundred gigabytes. Delete a file there by accident, and you have seven days to recover it. The project directory has the same seven-day safety net.",
+      "estimated_duration_s": 11.2,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "The home box with '100 GB'; a file page lifts out and vanishes, a seven-day dial sweeps, and the page comes back; the cabinet gets the same dial.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "100 GB"
+          },
+          {
+            "at": 0.35,
+            "event": "file deleted"
+          },
+          {
+            "at": 0.55,
+            "event": "7 days: it comes back"
+          },
+          {
+            "at": 0.85,
+            "event": "project has it too"
+          }
+        ],
+        "manim": {
+          "class": "B31_SevenDays"
+        },
+        "motion_claim": "The home box with '100 GB'; a file page lifts out and vanishes, a seven-day dial sweeps, and the page comes back; the cabinet gets the same dial."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "lecture, isometric lane (show-tell drawing laws): one drawn scene on a cream stage with a few labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 9.69,
+      "audio_file": "mp3/beat-B31.mp3",
+      "render_duration_s": 9.708333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B31.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-02T13:52:11"
+      }
+    },
+    {
+      "beat_id": "B32",
+      "act": "III · Where Files Live",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Scratch is huge. Ten terabytes, and up to fifteen million files. But nothing in scratch can be recovered, and there's a thirty-day purge. So move anything important out before it's gone.",
+      "estimated_duration_s": 12.4,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "The scratch bin fills with blocks, one marked with a terracotta dot; '10 TB' lands; a thirty-day sweep line crosses the bin; the marked block is lifted out to the cabinet just before the rest vanish.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "bin fills, 10 TB"
+          },
+          {
+            "at": 0.5,
+            "event": "30-day sweep"
+          },
+          {
+            "at": 0.8,
+            "event": "the important block is moved out; the rest are purged"
+          }
+        ],
+        "manim": {
+          "class": "B32_ScratchPurge"
+        },
+        "motion_claim": "The scratch bin fills with blocks, one marked with a terracotta dot; '10 TB' lands; a thirty-day sweep line crosses the bin; the marked block is lifted out to the cabinet just before the rest vanish."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "lecture, isometric lane (show-tell drawing laws): one drawn scene on a cream stage with a few labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 10.13,
+      "audio_file": "mp3/beat-B32.mp3",
+      "render_duration_s": 10.166666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B32.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-02T13:52:11"
+      }
+    },
+    {
+      "beat_id": "B40",
+      "act": "IV · Compute",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Compute is split into partitions. One is CPU only. Four have GPUs: a batch and a devel partition for the B200s, and a batch and a devel partition for the RTX cards. Every GPU node carries about two point three terabytes of memory.",
+      "estimated_duration_s": 17.2,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A drawn table builds row by row from the source: cpu, b200-batch, b200-devel, rtx-batch, rtx-devel, with GPU and max walltime columns.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "cpu row"
+          },
+          {
+            "at": 0.35,
+            "event": "B200 rows"
+          },
+          {
+            "at": 0.6,
+            "event": "RTX rows"
+          },
+          {
+            "at": 0.85,
+            "event": "2.3 TB per GPU node"
+          }
+        ],
+        "manim": {
+          "class": "B40_PartitionTable"
+        },
+        "motion_claim": "A drawn table builds row by row from the source: cpu, b200-batch, b200-devel, rtx-batch, rtx-devel, with GPU and max walltime columns."
+      },
+      "actual_duration_s": 14.76,
+      "audio_file": "mp3/beat-B40.mp3",
+      "render_duration_s": 14.791666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B40.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-02T13:52:11"
+      }
+    },
+    {
+      "beat_id": "B41",
+      "act": "IV · Compute",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Batch partitions are for jobs you submit and walk away from. They run up to twenty-four hours, and they support more than one GPU. Devel partitions are for interactive work: four hours at most, and four running jobs per user.",
+      "estimated_duration_s": 16.0,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Two bars grow side by side: a long one to 24 h (batch) and a short one to 4 h (devel); under devel four job slots fill and a fifth bounces off.",
+        "show": [
+          {
+            "at": 0.3,
+            "event": "batch bar grows to 24 h"
+          },
+          {
+            "at": 0.65,
+            "event": "devel bar stops at 4 h"
+          },
+          {
+            "at": 0.85,
+            "event": "four slots, the fifth waits"
+          }
+        ],
+        "manim": {
+          "class": "B41_BatchVsDevel"
+        },
+        "motion_claim": "Two bars grow side by side: a long one to 24 h (batch) and a short one to 4 h (devel); under devel four job slots fill and a fifth bounces off."
+      },
+      "actual_duration_s": 12.67,
+      "audio_file": "mp3/beat-B41.mp3",
+      "render_duration_s": 12.708333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B41.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-02T13:52:11"
+      }
+    },
+    {
+      "beat_id": "B42",
+      "act": "IV · Compute",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Before you ask for more than one GPU, confirm your code can actually use them. If it can't, the extra cards sit idle.",
+      "estimated_duration_s": 9.2,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Four GPU blocks in a row; a job box plugs into all four; only the first lights up and its meter fills, the other three stay dark with empty meters.",
+        "show": [
+          {
+            "at": 0.2,
+            "event": "four GPUs requested"
+          },
+          {
+            "at": 0.6,
+            "event": "one works"
+          },
+          {
+            "at": 0.85,
+            "event": "three sit idle"
+          }
+        ],
+        "manim": {
+          "class": "B42_IdleCards"
+        },
+        "motion_claim": "Four GPU blocks in a row; a job box plugs into all four; only the first lights up and its meter fills, the other three stay dark with empty meters."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "lecture, isometric lane (show-tell drawing laws): one drawn scene on a cream stage with a few labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 7.23,
+      "audio_file": "mp3/beat-B42.mp3",
+      "render_duration_s": 7.25,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B42.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-02T13:52:11"
+      }
+    },
+    {
+      "beat_id": "B43",
+      "act": "IV · Compute",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "And idle is watched. A background process tracks GPU utilization and cancels jobs that sit idle. So end your interactive session when you're done. A tool called jobstats will also report how each job used what it asked for.",
+      "estimated_duration_s": 15.6,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A utilization line runs along a time axis, drops to zero and stays flat; a watcher marker reaches it and the job block is struck out and removed; the freed GPU lights for the next job in the queue.",
+        "show": [
+          {
+            "at": 0.2,
+            "event": "utilization falls to zero"
+          },
+          {
+            "at": 0.4,
+            "event": "idle job cancelled"
+          },
+          {
+            "at": 0.6,
+            "event": "GPU goes to the next job"
+          }
+        ],
+        "manim": {
+          "class": "B43_IdleCancel"
+        },
+        "motion_claim": "A utilization line runs along a time axis, drops to zero and stays flat; a watcher marker reaches it and the job block is struck out and removed; the freed GPU lights for the next job in the queue."
+      },
+      "actual_duration_s": 13.33,
+      "audio_file": "mp3/beat-B43.mp3",
+      "render_duration_s": 13.333333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B43.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-02T13:52:11"
+      }
+    },
+    {
+      "beat_id": "B44",
+      "act": "IV · Compute",
+      "lane": "remotion",
+      "proof_gate": "SHOW",
+      "narration_text": "You can see the live list yourself. The command s info prints every partition, its time limit, and its node count. Run it and you may see more partitions than the five here, because the cluster keeps changing.",
+      "estimated_duration_s": 15.2,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "the sinfo command lands"
+          },
+          {
+            "at": 0.3,
+            "event": "real partition rows print (captured read-only, 2 October 2026)"
+          }
+        ],
+        "remotion": {
+          "pattern": "CCPlainShell",
+          "props": {
+            "title": "ssh — login.aicr.ai",
+            "lines": [
+              "$ sinfo -o \"%14P %11l %6D\"",
+              "PARTITION      TIMELIMIT   NODES",
+              "cpu*           1-00:00:00  5",
+              "rtx-batch      1-00:00:00  17",
+              "b200-batch     1-00:00:00  25",
+              "b200-fullnode  1-00:00:00  4",
+              "rtx-devel      4:00:00     2",
+              "b200-devel     4:00:00     2",
+              "preemptable    1-00:00:00  46"
+            ],
+            "startCue": 60,
+            "lineGap": 26,
+            "durationSeconds": 11.46
+          }
+        }
+      },
+      "motion_claim": "The real command and its real output print line by line.",
+      "actual_duration_s": 11.46,
+      "audio_file": "mp3/beat-B44.mp3",
+      "render_duration_s": 11.5,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B44.mp4",
+        "filled_by": "media",
+        "at": "2026-10-02T13:52:11"
+      }
+    },
+    {
+      "beat_id": "B50",
+      "act": "V · Running A Job",
+      "lane": "remotion",
+      "proof_gate": "SHOW",
+      "narration_text": "AICR runs Slurm, so there are three ways to work. s batch, for jobs that run without you. s run, for an interactive shell. And Open OnDemand, in the browser.",
+      "estimated_duration_s": 12.0,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.35,
+            "event": "sbatch"
+          },
+          {
+            "at": 0.6,
+            "event": "srun"
+          },
+          {
+            "at": 0.8,
+            "event": "Open OnDemand"
+          }
+        ],
+        "remotion": {
+          "pattern": "LibraryIconRow",
+          "props": {
+            "title": "Three Ways to Work on AICR",
+            "items": [
+              {
+                "label": "sbatch",
+                "sub": "runs without you",
+                "icon": "file-code",
+                "mono": true,
+                "cue_phrase": "s batch",
+                "at": 0.318
+              },
+              {
+                "label": "srun",
+                "sub": "an interactive shell",
+                "icon": "terminal",
+                "mono": true,
+                "cue_phrase": "s run",
+                "at": 0.573
+              },
+              {
+                "label": "Open OnDemand",
+                "sub": "in the browser",
+                "icon": "browser",
+                "cue_phrase": "And Open OnDemand",
+                "at": 0.783
+              }
+            ],
+            "durationSeconds": 9.51,
+            "iconPx": 320
+          },
+          "rendered": {
+            "out": "media/B50.mp4",
+            "at": "2026-10-02T17:51:15.985139+00:00"
+          }
+        }
+      },
+      "motion_claim": "Three named routes, each landing as one large library icon as it is spoken.",
+      "actual_duration_s": 9.51,
+      "audio_file": "mp3/beat-B50.mp3",
+      "render_duration_s": 9.541666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B50.mp4",
+        "filled_by": "remotion:LibraryIconRow",
+        "at": "2026-10-02T13:52:11"
+      }
+    },
+    {
+      "beat_id": "B51",
+      "act": "V · Running A Job",
+      "lane": "remotion",
+      "proof_gate": "SHOW",
+      "narration_text": "A batch job is a script. The lines that start with S BATCH are your request: which partition, how many CPUs, one GPU, sixteen gigabytes of memory, and a time limit of thirty minutes.",
+      "estimated_duration_s": 13.6,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "the script header prints line by line"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "myjob.slurm — the request",
+            "code": "#!/bin/bash\n#SBATCH --partition=b200-batch\n#SBATCH --job-name=b200_test_job\n#SBATCH --nodes=1\n#SBATCH --ntasks=1\n#SBATCH --cpus-per-task=8\n#SBATCH --gres=gpu:1\n#SBATCH --mem=16G\n#SBATCH --time=00:30:00\n#SBATCH --output=b200_test_%j.out\n#SBATCH --error=b200_test_%j.err",
+            "language": "bash",
+            "largeText": true,
+            "sparkLine": "Every #SBATCH line is part of the request.",
+            "durationSeconds": 11.01
+          }
+        }
+      },
+      "motion_claim": "The real script header from the training material prints line by line.",
+      "actual_duration_s": 11.01,
+      "audio_file": "mp3/beat-B51.mp3",
+      "render_duration_s": 11.041666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B51.mp4",
+        "filled_by": "media",
+        "at": "2026-10-02T13:52:11"
+      }
+    },
+    {
+      "beat_id": "B52",
+      "act": "V · Running A Job",
+      "lane": "remotion",
+      "proof_gate": "SHOW",
+      "narration_text": "Below the request is the work. Clear the loaded modules. Load CUDA and miniforge. Activate your environment. Then run your training script.",
+      "estimated_duration_s": 8.8,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "the script body prints line by line"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeCodeBeat",
+          "props": {
+            "title": "myjob.slurm — the work",
+            "code": "module purge\nmodule load cuda/13.1\nmodule load miniforge3/25.3.0-3\nsource activate myenv\n\npython training.py",
+            "language": "bash",
+            "largeText": true,
+            "sparkLine": "Modules first, then your code.",
+            "durationSeconds": 7.96
+          }
+        }
+      },
+      "motion_claim": "The real script body prints line by line.",
+      "actual_duration_s": 7.96,
+      "audio_file": "mp3/beat-B52.mp3",
+      "render_duration_s": 8.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B52.mp4",
+        "filled_by": "media",
+        "at": "2026-10-02T13:52:11"
+      }
+    },
+    {
+      "beat_id": "B53",
+      "act": "V · Running A Job",
+      "lane": "remotion",
+      "proof_gate": "SHOW",
+      "narration_text": "Submit it with s batch and the file name. If your script writes logs into a folder, create that folder first. Then three commands follow the job around. s queue shows your queued and running jobs. s cancel stops one. And s acct shows what a finished job actually used.",
+      "estimated_duration_s": 20.0,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "mkdir, sbatch"
+          },
+          {
+            "at": 0.5,
+            "event": "squeue"
+          },
+          {
+            "at": 0.7,
+            "event": "scancel"
+          },
+          {
+            "at": 0.85,
+            "event": "sacct"
+          }
+        ],
+        "remotion": {
+          "pattern": "CCPlainShell",
+          "props": {
+            "title": "ssh — login.aicr.ai",
+            "lines": [
+              "$ mkdir -p logs",
+              "$ sbatch myjob.slurm",
+              "# your queued and running jobs",
+              "$ squeue -u $USER",
+              "# cancel a job",
+              "$ scancel <jobid>",
+              "# what a finished job used",
+              "$ sacct -j <jobid> \\",
+              "    --format=JobID,Elapsed,MaxRSS,State"
+            ],
+            "startCue": 20,
+            "lineGap": 31,
+            "durationSeconds": 14.93
+          }
+        }
+      },
+      "motion_claim": "The commands from the training material land in order; no output is shown because none was run.",
+      "actual_duration_s": 14.93,
+      "audio_file": "mp3/beat-B53.mp3",
+      "render_duration_s": 14.958333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B53.mp4",
+        "filled_by": "media",
+        "at": "2026-10-02T13:52:11"
+      }
+    },
+    {
+      "beat_id": "B54",
+      "act": "V · Running A Job",
+      "lane": "remotion",
+      "proof_gate": "SHOW",
+      "narration_text": "For an interactive shell on a GPU node, use s run. This one asks the RTX devel partition for eight CPUs, sixteen gigabytes, and one GPU, for one hour. Always set the time, so the session ends even if you forget. And type exit to give the GPU back.",
+      "estimated_duration_s": 19.6,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "the srun command"
+          },
+          {
+            "at": 0.6,
+            "event": "--time"
+          },
+          {
+            "at": 0.9,
+            "event": "exit"
+          }
+        ],
+        "remotion": {
+          "pattern": "CCPlainShell",
+          "props": {
+            "title": "ssh — login.aicr.ai",
+            "lines": [
+              "$ srun -p rtx-devel -N 1 -n 1 -c 8 \\",
+              "    --mem=16G --gres=gpu:1 \\",
+              "    --time=01:00:00 --pty bash",
+              "# always set --time",
+              "$ exit"
+            ],
+            "startCue": 30,
+            "lineGap": 75,
+            "durationSeconds": 15.4
+          }
+        }
+      },
+      "motion_claim": "The real srun command from the training material; exit releases the allocation.",
+      "actual_duration_s": 15.4,
+      "audio_file": "mp3/beat-B54.mp3",
+      "render_duration_s": 15.416666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B54.mp4",
+        "filled_by": "media",
+        "at": "2026-10-02T13:52:11"
+      }
+    },
+    {
+      "beat_id": "B55",
+      "act": "V · Running A Job",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Or skip the terminal. Open OnDemand launches graphical sessions, such as JupyterLab or a desktop. You choose the partition, the time, and the resources, and it submits the job to Slurm for you. Those sessions count against the devel limits.",
+      "estimated_duration_s": 16.0,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A browser window with three choice chips (partition, time, resources); a job box leaves the window, enters a Slurm queue, and takes one of the four devel slots from B41.",
+        "show": [
+          {
+            "at": 0.2,
+            "event": "browser window"
+          },
+          {
+            "at": 0.45,
+            "event": "partition, time, resources"
+          },
+          {
+            "at": 0.65,
+            "event": "job goes to Slurm"
+          },
+          {
+            "at": 0.85,
+            "event": "it takes a devel slot"
+          }
+        ],
+        "manim": {
+          "class": "B55_OodToSlurm"
+        },
+        "motion_claim": "A browser window with three choice chips (partition, time, resources); a job box leaves the window, enters a Slurm queue, and takes one of the four devel slots from B41."
+      },
+      "actual_duration_s": 13.74,
+      "audio_file": "mp3/beat-B55.mp3",
+      "render_duration_s": 13.75,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B55.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-02T13:52:11"
+      }
+    },
+    {
+      "beat_id": "B60",
+      "act": "VI · Data And Lifecycle",
+      "lane": "remotion",
+      "proof_gate": "SHOW",
+      "narration_text": "To move large data, the primary method is Globus. Northeastern has a subscription. You set up a Globus account with your Northeastern credentials, then connect a folder on Explorer, or on your own machine, to a folder on AICR.",
+      "estimated_duration_s": 15.6,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "the real 'Using Globus' docs page"
+          },
+          {
+            "at": 0.3,
+            "event": "camera moves down to the account set-up steps; ring"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrowserCapture",
+          "props": {
+            "url": "rc-docs.northeastern.edu/en/latest/datamanagement/globus.html",
+            "image": "lecture-aicr-introduction/globus.png",
+            "caption": "Northeastern Research Computing docs, captured 2 October 2026",
+            "moves": [
+              {
+                "at": 0.0,
+                "x": 0.5,
+                "y": 0.3,
+                "scale": 1.35,
+                "ring": [
+                  0.245,
+                  0.035,
+                  0.18,
+                  0.07
+                ]
+              },
+              {
+                "at": 0.3,
+                "x": 0.5,
+                "y": 0.75,
+                "scale": 1.5,
+                "ring": [
+                  0.245,
+                  0.64,
+                  0.5,
+                  0.33
+                ]
+              }
+            ],
+            "durationSeconds": 12.89
+          }
+        }
+      },
+      "motion_claim": "The real documentation page; the camera moves from the title to the set-up steps as they are described.",
+      "actual_duration_s": 12.89,
+      "audio_file": "mp3/beat-B60.mp3",
+      "render_duration_s": 12.916666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B60.mp4",
+        "filled_by": "media",
+        "at": "2026-10-02T13:52:11"
+      }
+    },
+    {
+      "beat_id": "B61",
+      "act": "VI · Data And Lifecycle",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Last, the part people forget. Accounts and project directories on AICR are temporary. Once a year there's a check-in. The PI renews the request, and the project continues.",
+      "estimated_duration_s": 11.2,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A ring of twelve month ticks; a marker travels round it and reaches a gate at the top labelled 'annual review'; a check lands, the gate opens, and the marker starts another lap.",
+        "show": [
+          {
+            "at": 0.3,
+            "event": "a year goes round"
+          },
+          {
+            "at": 0.6,
+            "event": "annual review gate"
+          },
+          {
+            "at": 0.85,
+            "event": "renewed: another lap"
+          }
+        ],
+        "manim": {
+          "class": "B61_YearlyReview"
+        },
+        "motion_claim": "A ring of twelve month ticks; a marker travels round it and reaches a gate at the top labelled 'annual review'; a check lands, the gate opens, and the marker starts another lap."
+      },
+      "actual_duration_s": 10.13,
+      "audio_file": "mp3/beat-B61.mp3",
+      "render_duration_s": 10.166666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B61.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-02T13:52:11"
+      }
+    },
+    {
+      "beat_id": "B62",
+      "act": "VI · Data And Lifecycle",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "And when the project ends, the data has to leave. AICR is not permanent storage. Move your results back to a Northeastern resource. Questions go to the Research Computing team, at r c help at northeastern dot e d u.",
+      "estimated_duration_s": 16.0,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "The AICR rack on the right with the project cabinet; its blocks ride the belt back to the Northeastern rack on the left; the cabinet empties and pales; the email address lands underneath.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "project ends"
+          },
+          {
+            "at": 0.45,
+            "event": "data rides back to Northeastern"
+          },
+          {
+            "at": 0.75,
+            "event": "rchelp@northeastern.edu"
+          }
+        ],
+        "manim": {
+          "class": "B62_DataGoesHome"
+        },
+        "motion_claim": "The AICR rack on the right with the project cabinet; its blocks ride the belt back to the Northeastern rack on the left; the cabinet empties and pales; the email address lands underneath."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "lecture, isometric lane (show-tell drawing laws): one drawn scene on a cream stage with a few labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 12.82,
+      "audio_file": "mp3/beat-B62.mp3",
+      "render_duration_s": 12.833333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B62.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-02T13:52:11"
+      }
+    },
+    {
+      "beat_id": "BVDT",
+      "act": "recap",
+      "lane": "bookend",
+      "proof_gate": "SHOW",
+      "narration_text": "Let's recap with Claude. AICR is a shared GPU cluster, with two hundred forty-eight B200s and one hundred fifty-two RTX PRO 6000s. You develop on Explorer, and bring the production run to AICR. A PI's proposal gets you on, and you sign in through Open OnDemand. Home holds a hundred gigabytes. Scratch holds ten terabytes, with a thirty-day purge. Batch partitions run twenty-four hours, devel partitions run four, and idle GPU jobs get cancelled. Projects are reviewed every year, and your data goes home at the end.",
+      "estimated_duration_s": 34.8,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "artifact page opens"
+          },
+          {
+            "at": 0.1,
+            "event": "six recap lines land in narration order"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "Recap",
+            "artifactHeading": "AICR Introduction",
+            "artifactLines": [
+              "AICR is a shared GPU cluster: 248 B200s and 152 RTX PRO 6000s.",
+              "Develop on Explorer; bring the production run to AICR.",
+              "A PI's proposal gets you on; sign in at ood.aicr.ai.",
+              "Home holds 100 GB; scratch holds 10 TB with a 30-day purge.",
+              "Batch runs 24 hours, devel runs 4, and idle GPU jobs get cancelled.",
+              "Projects are reviewed yearly; move your data home at the end."
+            ]
+          }
+        }
+      },
+      "lead_silence_s": 0.5,
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Mandated ClaudeVerdictArtifact bookend."
+      },
+      "actual_duration_s": 28.84,
+      "audio_file": "mp3/beat-BVDT.mp3",
+      "render_duration_s": 28.875,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BVDT.mp4",
+        "filled_by": "media",
+        "at": "2026-10-02T13:52:11"
+      }
+    },
+    {
+      "beat_id": "BHTF",
+      "act": "your turn",
+      "lane": "bookend",
+      "proof_gate": "SHOW",
+      "narration_text": "Your turn. Paste this into Claude: I'm about to run my first production job on a shared GPU cluster that uses Slurm. Here is my training setup: [describe it in two sentences]. Write an sbatch script that asks for one GPU and a 30-minute time limit. Then tell me which of my files belong in home, which in scratch, and which in the project directory. Then check two things yourself. Does every S BATCH line ask only for what your code can use? And is anything you can't afford to lose sitting in scratch?",
+      "estimated_duration_s": 37.6,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Composer opens — 'Your turn.'"
+          },
+          {
+            "at": 0.1,
+            "event": "the prompt types in full"
+          },
+          {
+            "at": 0.8,
+            "event": "two check lines land"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your turn.",
+            "topic": "CLAUDE · YOUR TURN",
+            "segment": "Plan Your First AICR Job",
+            "command": "I'm about to run my first production job on a shared GPU cluster that uses Slurm. Here is my training setup: [describe it in two sentences]. Write an sbatch script that asks for one GPU and a 30-minute time limit. Then tell me which of my files belong in home, which in scratch, and which in the project directory.",
+            "runningText": "paste this into Claude…",
+            "output": [
+              "Check: does every #SBATCH line ask only for what your code can use?",
+              "Check: is anything you can't afford to lose sitting in scratch?"
+            ],
+            "folderLabel": "@NikBearBrown",
+            "modelLabel": "Opus 5.5",
+            "effortLabel": "High"
+          }
+        }
+      },
+      "actual_duration_s": 25.62,
+      "audio_file": "mp3/beat-BHTF.mp3",
+      "render_duration_s": 25.625,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BHTF.mp4",
+        "filled_by": "media",
+        "at": "2026-10-02T13:52:11"
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "outro",
+      "lane": "bookend",
+      "proof_gate": "SHOW",
+      "narration_text": "AICR Introduction. At Nik Bear Brown.",
+      "estimated_duration_s": 4.0,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "title restates; handle; mascot"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "AICR Introduction",
+            "slug": "claude-liam-lecture-aicr-introduction",
+            "handle": "@NikBearBrown",
+            "subline": ""
+          }
+        }
+      },
+      "kind": "outro_voice",
+      "tail_silence_s": 1.0,
+      "actual_duration_s": 3.97,
+      "audio_file": "mp3/beat-BOUT.mp3",
+      "render_duration_s": 4.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BOUT.mp4",
+        "filled_by": "media",
+        "at": "2026-10-02T13:52:11"
+      }
+    }
+  ]
+}

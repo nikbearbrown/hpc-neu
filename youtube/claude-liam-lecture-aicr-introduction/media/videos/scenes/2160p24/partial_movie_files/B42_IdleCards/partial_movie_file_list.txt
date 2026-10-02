@@ -1,0 +1,10 @@
+# This file is used internally by FFMPEG.
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/hpc/youtube/claude-liam-lecture-aicr-introduction/media/videos/scenes/2160p24/partial_movie_files/B42_IdleCards/1697911619_4092324167_2680269974.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/hpc/youtube/claude-liam-lecture-aicr-introduction/media/videos/scenes/2160p24/partial_movie_files/B42_IdleCards/1167814662_2311723399_759390679.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/hpc/youtube/claude-liam-lecture-aicr-introduction/media/videos/scenes/2160p24/partial_movie_files/B42_IdleCards/1167814662_718393745_2501869955.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/hpc/youtube/claude-liam-lecture-aicr-introduction/media/videos/scenes/2160p24/partial_movie_files/B42_IdleCards/1167814662_4127097088_4113071078.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/hpc/youtube/claude-liam-lecture-aicr-introduction/media/videos/scenes/2160p24/partial_movie_files/B42_IdleCards/1167814662_3004320429_3449166500.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/hpc/youtube/claude-liam-lecture-aicr-introduction/media/videos/scenes/2160p24/partial_movie_files/B42_IdleCards/1167814662_4028984390_2449728055.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/hpc/youtube/claude-liam-lecture-aicr-introduction/media/videos/scenes/2160p24/partial_movie_files/B42_IdleCards/1167814662_530663948_98350356.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/hpc/youtube/claude-liam-lecture-aicr-introduction/media/videos/scenes/2160p24/partial_movie_files/B42_IdleCards/1167814662_3587968576_978147178.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/hpc/youtube/claude-liam-lecture-aicr-introduction/media/videos/scenes/2160p24/partial_movie_files/B42_IdleCards/1167814662_2097278417_1527282824.mp4'

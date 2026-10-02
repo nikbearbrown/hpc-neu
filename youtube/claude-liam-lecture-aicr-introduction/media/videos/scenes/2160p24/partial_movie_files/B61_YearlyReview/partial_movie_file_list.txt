@@ -1,0 +1,13 @@
+# This file is used internally by FFMPEG.
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/hpc/youtube/claude-liam-lecture-aicr-introduction/media/videos/scenes/2160p24/partial_movie_files/B61_YearlyReview/1697911619_767400761_335432168.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/hpc/youtube/claude-liam-lecture-aicr-introduction/media/videos/scenes/2160p24/partial_movie_files/B61_YearlyReview/1167814662_2441103725_1735538567.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/hpc/youtube/claude-liam-lecture-aicr-introduction/media/videos/scenes/2160p24/partial_movie_files/B61_YearlyReview/1167814662_313122351_2519582676.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/hpc/youtube/claude-liam-lecture-aicr-introduction/media/videos/scenes/2160p24/partial_movie_files/B61_YearlyReview/1167814662_2639046159_893592146.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/hpc/youtube/claude-liam-lecture-aicr-introduction/media/videos/scenes/2160p24/partial_movie_files/B61_YearlyReview/1167814662_1049889840_2512676899.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/hpc/youtube/claude-liam-lecture-aicr-introduction/media/videos/scenes/2160p24/partial_movie_files/B61_YearlyReview/1167814662_2722629478_4232082678.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/hpc/youtube/claude-liam-lecture-aicr-introduction/media/videos/scenes/2160p24/partial_movie_files/B61_YearlyReview/1167814662_1786577571_3584286104.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/hpc/youtube/claude-liam-lecture-aicr-introduction/media/videos/scenes/2160p24/partial_movie_files/B61_YearlyReview/1167814662_990111804_2814118382.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/hpc/youtube/claude-liam-lecture-aicr-introduction/media/videos/scenes/2160p24/partial_movie_files/B61_YearlyReview/1167814662_4043088365_2114250324.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/hpc/youtube/claude-liam-lecture-aicr-introduction/media/videos/scenes/2160p24/partial_movie_files/B61_YearlyReview/1167814662_4006496068_2102144176.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/hpc/youtube/claude-liam-lecture-aicr-introduction/media/videos/scenes/2160p24/partial_movie_files/B61_YearlyReview/1167814662_2750559523_781624992.mp4'
+file 'file:/Users/bear/Documents/CoWork/bear-textbooks/books/hpc/youtube/claude-liam-lecture-aicr-introduction/media/videos/scenes/2160p24/partial_movie_files/B61_YearlyReview/1167814662_3843333874_450178805.mp4'

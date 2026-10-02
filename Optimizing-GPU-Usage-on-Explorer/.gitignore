@@ -1,0 +1,8 @@
+prof_output/
+gpu_training_env/
+profiling_content.md
+training_gpu.md
+logs/
+__pycache__/
+.ipynb_checkpoints/
+.claude/
